@@ -1,111 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start a Project — AhamSutra Media Lab</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/svgs/favicon.svg">
-  <meta name="description" content="Connect with AhamSutra Media Lab. Let's weave your story into the golden thread.">
-  <link rel="stylesheet" href="style.css?v=1">
-</head>
-
-<body>
-
-  <div id="sp"></div>
-
-  <div id="cd"></div>
-  <div id="cr"></div>
-
-  <header class="cf-header">
-    <a href="../index.html" class="back-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M19 12H5M12 19l-7-7 7-7" />
-      </svg>
-      <span>Back</span>
-    </a>
-    <div class="cf-brand">
-      <img src="../assets/svgs/logo.svg" alt="AhamSutra">
-    </div>
-  </header>
-
-  <main class="cf-main">
-    <div class="cf-container">
-      <div class="cf-intro">
-        <div class="cf-label">Start a Project</div>
-        <h1 class="cf-title">Let's Begin<br><em>The Thread</em></h1>
-        <p class="cf-desc">Every great story starts with a conversation. Tell us about your vision, and together we'll
-          weave it into something meaningful.</p>
-      </div>
-
-      <form class="cf-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="71ae9ddf-fdfe-48f6-b95b-fabff8eafca6">
-        <input type="hidden" name="subject" value="New Project Inquiry - AhamSutra Media Lab">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="How should we address you?" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Where can we reach you?" required>
-          </div>
+<div class="modal-overlay" id="joinModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="joinModalClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="modal-container">
+        <div class="cf-intro">
+          <div class="cf-label">Start a Project</div>
+          <h2 class="cf-title">Let's Begin<br><em>The Thread</em></h2>
+          <p class="cf-desc">Every great story starts with a conversation. Tell us about your vision, and together we'll weave it into something meaningful.</p>
         </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="phone" placeholder="+91" required>
+        <form class="cf-form" id="joinForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="7a1af9c7-53c5-48ec-b229-388467832014">
+          <input type="hidden" name="subject" value="New Project Inquiry - AhamSutra Media Lab">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="join-name">Full Name</label>
+              <input type="text" id="join-name" name="name" placeholder="How should we address you?" required>
+            </div>
+            <div class="form-group">
+              <label for="join-email">Email</label>
+              <input type="email" id="join-email" name="email" placeholder="Where can we reach you?" required>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="role">Role / Interest</label>
-            <select id="role" name="role" required>
-              <option value="" disabled selected>Select an option</option>
-              <option value="Researcher/Thinker">Researcher/Thinker</option>
-              <option value="Creator">Creator</option>
-              <option value="Volunteer">Volunteer</option>
-              <option value="Health Professional">Health Professional</option>
-              <option value="Partner/Organization">Partner / Organization</option>
-            </select>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="join-phone">Phone / WhatsApp</label>
+              <input type="tel" id="join-phone" name="phone" placeholder="+91" required>
+            </div>
+            <div class="form-group">
+              <label for="join-role">Role / Interest</label>
+              <select id="join-role" name="role" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Researcher/Thinker">Researcher/Thinker</option>
+                <option value="Creator">Creator</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Health Professional">Health Professional</option>
+                <option value="Partner/Organization">Partner / Organization</option>
+              </select>
+            </div>
           </div>
-        </div>
-
-        <div class="form-group full">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Share your message with us..."
-            required></textarea>
-        </div>
-
-        <div class="form-footer">
-          <button type="submit" class="submit-btn">
-            <span>Join the Movement</span>
+          <div class="form-group full">
+            <label for="join-message">Message</label>
+            <textarea id="join-message" name="message" rows="6" placeholder="Share your message with us..." required></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="submit-btn">
+              <span>Join the Network</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div class="cf-success" id="joinSuccessMsg">
+          <div class="success-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
+              <path d="M20 6L9 17l-5-5" />
             </svg>
-          </button>
+          </div>
+          <h3>The Thread is Cast</h3>
+          <p>We've received your message and will weave back to you soon. The journey begins.</p>
+          <button class="btn-o" id="joinCloseSuccessBtn">Return to Site</button>
         </div>
-      </form>
-
-      <div class="cf-success" id="successMsg">
-        <div class="success-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M20 6L9 17l-5-5" />
-          </svg>
-        </div>
-        <h3>The Thread is Cast</h3>
-        <p>We've received your message and will weave back to you soon. The journey begins.</p>
-        <a href="../index.html" class="btn-o">Return Home</a>
       </div>
     </div>
-
-    <div class="cf-decor">
-      <div class="cf-decor-line"></div>
-      <div class="cf-decor-text">Ahamsutra</div>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
-
-</body>
-
-</html>
+  </div>

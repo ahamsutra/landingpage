@@ -1,0 +1,122 @@
+<div class="modal-overlay" id="contactModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="modal-container">
+        <div class="cf-intro">
+          <div class="cf-label">S.P.A.R.K Movement</div>
+          <h2 class="cf-title">Join<br><em>S.P.A.R.K</em></h2>
+          <p class="cf-desc">Be part of building healthier, active, and aware communities.</p>
+        </div>
+        <form class="cf-form" id="contactFormModal" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="7a1af9c7-53c5-48ec-b229-388467832014">
+          <input type="hidden" name="subject" value="New S.P.A.R.K Movement Inquiry - AhamSutra Media Lab">
+          <div class="cf-section-label">Basic Details</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="area">Area (GHMC Division No.)</label>
+              <input type="text" id="area" name="area" placeholder="Division no." required>
+            </div>
+          </div>
+          <div class="cf-section-label">How Do You Want to Participate?</div>
+          <div class="form-group">
+            <select id="participate" name="participate" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Join Walkathons">Join Walkathons</option>
+              <option value="Volunteer for Events">Volunteer for Events</option>
+              <option value="Organize S.P.A.R.K in my Area">Organize S.P.A.R.K in my Area</option>
+              <option value="Health Professional">Health Professional (Doctor / Nutritionist / Trainer)</option>
+              <option value="Partner / Sponsor">Partner / Sponsor</option>
+              <option value="Media / Documentation">Media / Documentation</option>
+            </select>
+          </div>
+          <div class="cf-section-label">Availability</div>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="radio" name="availability" value="Weekends" required>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Weekends</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="radio" name="availability" value="Weekdays">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Weekdays</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="radio" name="availability" value="Flexible">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Flexible</span>
+            </label>
+          </div>
+          <div class="cf-section-label">Interest Areas</div>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="interests[]" value="Public Health">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Public Health</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="interests[]" value="Fitness / Active Lifestyle">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Fitness / Active Lifestyle</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="interests[]" value="Community Work">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Community Work</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="interests[]" value="Storytelling / Media">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Storytelling / Media</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="interests[]" value="Environment / Sanitation">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Environment / Sanitation</span>
+            </label>
+          </div>
+          <div class="cf-section-label">Why Do You Want to Join?</div>
+          <div class="form-group full">
+            <textarea id="message" name="message" rows="5" placeholder="Share your reason..." required></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="submit-btn">
+              <span>Join the Movement</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div class="cf-success" id="successMsgModal">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </div>
+          <h3>Welcome to S.P.A.R.K!</h3>
+          <p>Your spark has been registered. We'll connect with you soon.</p>
+          <button class="btn-o" id="closeSuccessBtn">Return to Site</button>
+        </div>
+      </div>
+    </div>
+  </div>

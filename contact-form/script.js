@@ -1,13 +1,13 @@
-function initJoinModal() {
-  const modal = document.getElementById('joinModal');
+function initContactModal() {
+  const modal = document.getElementById('contactModal');
   if (!modal) return;
   
-  const modalClose = document.getElementById('joinModalClose');
-  const form = document.getElementById('joinForm');
-  const successMsg = document.getElementById('joinSuccessMsg');
-  const closeSuccessBtn = document.getElementById('joinCloseSuccessBtn');
+  const modalClose = document.getElementById('modalClose');
+  const modalForm = document.getElementById('contactFormModal');
+  const successMsgModal = document.getElementById('successMsgModal');
+  const closeSuccessBtn = document.getElementById('closeSuccessBtn');
 
-  document.querySelectorAll('.join-trigger').forEach(btn => {
+  document.querySelectorAll('.spark-trigger').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       modal.classList.add('active');
@@ -37,18 +37,18 @@ function initJoinModal() {
     document.body.style.overflow = '';
   });
 
-  form?.addEventListener('submit', async (e) => {
+  modalForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
+    const formData = new FormData(modalForm);
     try {
-      const response = await fetch(form.action, {
+      const response = await fetch(modalForm.action, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
       if (response.ok) {
-        form.classList.add('hidden');
-        successMsg.classList.add('active');
+        modalForm.classList.add('hidden');
+        successMsgModal.classList.add('active');
       }
     } catch (err) {
       console.error('Form submission error:', err);
