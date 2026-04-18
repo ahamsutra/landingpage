@@ -1,40 +1,6 @@
 (function () {
 
-  /* ── CUSTOM CURSOR ─────────────────────── */
-  const dot = document.getElementById('cd');
-  const ring = document.getElementById('cr');
-  let rx = 0, ry = 0, mx = 0, my = 0;
 
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top = my + 'px';
-  });
-
-  (function trackRing() {
-    rx += (mx - rx) * 0.11;
-    ry += (my - ry) * 0.11;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-    requestAnimationFrame(trackRing);
-  })();
-
-  document.querySelectorAll('a,button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      dot.style.width = '12px';
-      dot.style.height = '12px';
-      ring.style.width = '64px';
-      ring.style.height = '64px';
-      ring.style.opacity = '.3';
-    });
-    el.addEventListener('mouseleave', () => {
-      dot.style.width = '8px';
-      dot.style.height = '8px';
-      ring.style.width = '40px';
-      ring.style.height = '40px';
-      ring.style.opacity = '.5';
-    });
-  });
 
   /* ── SCROLL PROGRESS ──────────────────── */
   const spbar = document.getElementById('sp');

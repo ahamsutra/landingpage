@@ -53,7 +53,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: none;
+      cursor: pointer;
       z-index: 10;
       transition: all .25s;
     }
@@ -173,7 +173,7 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c9892e' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 16px center;
-      cursor: none;
+      cursor: pointer;
     }
 
     .form-group select option {
@@ -215,7 +215,7 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      cursor: none;
+      cursor: pointer;
       transition: all .25s;
       border-radius: 40px;
     }
@@ -299,7 +299,7 @@
       display: inline-block;
       transition: all .25s;
       border-radius: 40px;
-      cursor: none;
+      cursor: pointer;
     }
 
     .btn-o:hover {
