@@ -1,0 +1,12 @@
+# robots.txt — AhamSutra Media Lab
+# https://www.ahamsutra.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (add as needed)
+Disallow: /contact-form/
+Disallow: /contact%20form/
+
+# Sitemap location
+Sitemap: https://www.ahamsutra.com/sitemap.xml
