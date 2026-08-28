@@ -132,9 +132,9 @@
     /* ─── EVENTS GRID ─── */
     .events-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 32px;
-      max-width: 620px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 820px;
     }
 
     /* ─── EVENT CARD ─── */
@@ -143,15 +143,16 @@
       border: 1px solid rgba(250, 248, 244, 0.1);
       border-radius: 12px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 240px 1fr;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
       transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
       position: relative;
+      align-items: stretch;
     }
 
     .event-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       border-color: rgba(201, 137, 46, 0.4);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
     }
@@ -165,14 +166,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border-bottom: 1px solid rgba(250, 248, 244, 0.08);
+      padding: 14px;
+      border-right: 1px solid rgba(250, 248, 244, 0.08);
+      border-bottom: none;
     }
 
     .event-poster-img {
-      width: 100%;
+      max-height: 280px;
+      max-width: 100%;
+      width: auto;
       height: auto;
       object-fit: contain;
       display: block;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
       transition: transform .5s var(--ease-sm);
     }
 
@@ -205,9 +212,10 @@
        4. Calculating the Interests
     */
     .event-details {
-      padding: 22px 22px 24px;
+      padding: 20px 24px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       flex: 1;
       gap: 12px;
       background: #171614;
@@ -710,6 +718,17 @@
       .events-grid {
         grid-template-columns: 1fr;
       }
+      .event-card {
+        grid-template-columns: 1fr;
+      }
+      .event-poster-wrap {
+        border-right: none;
+        border-bottom: 1px solid rgba(250, 248, 244, 0.08);
+        padding: 16px;
+      }
+      .event-poster-img {
+        max-height: 320px;
+      }
       .modal-body {
         padding: 24px 20px 30px;
       }
@@ -732,9 +751,7 @@
       </a>
       <a href="projects.html" class="nav-link-item active" id="nav-projects-link">Projects</a>
     </div>
-    <div class="nav-right">
-      <button class="nav-cta join-trigger" id="nav-join-btn"><span>Join Movement</span></button>
-    </div>
+    <div class="nav-right"></div>
   </nav>
 
   <div class="projects-page-wrapper">

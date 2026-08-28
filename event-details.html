@@ -38,8 +38,8 @@
 
     .event-detail-main {
       flex: 1;
-      padding: 140px 40px 100px;
-      max-width: 980px;
+      padding: 108px 32px 48px;
+      max-width: 1160px;
       width: 100%;
       margin: 0 auto;
       box-sizing: border-box;
@@ -56,7 +56,7 @@
       text-transform: uppercase;
       color: var(--gold);
       text-decoration: none;
-      margin-bottom: 32px;
+      margin-bottom: 20px;
       transition: color .2s, transform .2s;
     }
 
@@ -71,23 +71,26 @@
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      align-items: stretch;
     }
 
     .event-hero-poster {
       width: 100%;
       background: #0d0c0a;
-      overflow: hidden;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 30px 20px;
-      border-bottom: 1px solid rgba(250, 248, 244, 0.08);
+      padding: 24px;
+      border-right: 1px solid rgba(250, 248, 244, 0.08);
+      border-bottom: none;
     }
 
     .event-hero-poster img {
       max-width: 100%;
-      max-height: 820px;
+      max-height: 520px;
       width: auto;
       height: auto;
       object-fit: contain;
@@ -97,10 +100,11 @@
     }
 
     .event-hero-body {
-      padding: 40px;
+      padding: 28px 34px;
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      justify-content: space-between;
+      gap: 18px;
     }
 
     .detail-meta-row {
@@ -108,42 +112,42 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       border-bottom: 1px solid rgba(250, 248, 244, 0.08);
-      padding-bottom: 20px;
+      padding-bottom: 14px;
     }
 
     .detail-datetime {
       font-family: var(--fh);
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: .08em;
       color: #e09f3e;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .detail-datetime svg {
-      width: 17px;
-      height: 17px;
+      width: 16px;
+      height: 16px;
       color: var(--gold);
       flex-shrink: 0;
     }
 
     .detail-interests-badge {
       font-family: var(--fh);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: .08em;
       color: var(--gold-l);
       background: rgba(201, 137, 46, 0.12);
       border: 1px solid rgba(201, 137, 46, 0.3);
-      padding: 8px 18px;
+      padding: 6px 14px;
       border-radius: 30px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .interests-pulse {
@@ -163,9 +167,9 @@
 
     .detail-title {
       font-family: var(--fd);
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(22px, 2.4vw, 32px);
       font-weight: 400;
-      line-height: 1.18;
+      line-height: 1.22;
       color: var(--cream);
       margin: 0;
     }
@@ -173,16 +177,16 @@
     .detail-address-box {
       background: rgba(250, 248, 244, 0.03);
       border: 1px solid rgba(250, 248, 244, 0.08);
-      border-radius: 10px;
-      padding: 18px 22px;
+      border-radius: 8px;
+      padding: 12px 16px;
       display: flex;
       align-items: flex-start;
-      gap: 14px;
+      gap: 12px;
     }
 
     .detail-address-box svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       color: var(--gold);
       flex-shrink: 0;
       margin-top: 2px;
@@ -190,73 +194,73 @@
 
     .detail-address-content h4 {
       font-family: var(--fh);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: .18em;
       text-transform: uppercase;
       color: rgba(250, 248, 244, 0.5);
-      margin: 0 0 4px 0;
+      margin: 0 0 2px 0;
     }
 
     .detail-address-content p {
       font-family: var(--fb);
-      font-size: 15px;
-      line-height: 1.5;
+      font-size: 13.5px;
+      line-height: 1.45;
       color: var(--cream);
       margin: 0;
     }
 
     .detail-section-title {
       font-family: var(--fh);
-      font-size: 11.5px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: .22em;
+      letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--gold);
-      margin: 0 0 12px 0;
+      margin: 0 0 8px 0;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .detail-section-title::before {
       content: '';
-      width: 20px;
+      width: 16px;
       height: 1.5px;
       background: var(--gold);
     }
 
     .detail-text {
       font-family: var(--fb);
-      font-size: 16px;
-      line-height: 1.8;
+      font-size: 13.5px;
+      line-height: 1.6;
       color: rgba(250, 248, 244, 0.85);
       margin: 0;
     }
 
     .detail-highlights {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 4px;
     }
 
     .highlight-item {
       background: rgba(20, 19, 17, 0.7);
       border: 1px solid rgba(250, 248, 244, 0.08);
-      border-radius: 8px;
-      padding: 16px 20px;
+      border-radius: 6px;
+      padding: 10px 12px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
       font-family: var(--fb);
-      font-size: 14.5px;
+      font-size: 12.5px;
       color: var(--cream);
     }
 
     .highlight-item svg {
-      width: 18px;
-      height: 18px;
+      width: 15px;
+      height: 15px;
       color: var(--gold);
       flex-shrink: 0;
     }
@@ -264,26 +268,26 @@
     .detail-cta-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      padding-top: 24px;
+      gap: 10px;
+      padding-top: 16px;
       border-top: 1px solid rgba(250, 248, 244, 0.08);
-      margin-top: 10px;
+      margin-top: 2px;
     }
 
     .btn-interest-action {
       font-family: var(--fh);
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--cream);
       background: rgba(250, 248, 244, 0.06);
       border: 1px solid rgba(250, 248, 244, 0.2);
-      padding: 14px 26px;
+      padding: 11px 20px;
       border-radius: 8px;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       cursor: pointer;
       transition: all .25s;
     }
@@ -412,6 +416,26 @@
       transform: translateY(0);
     }
 
+    @media (max-width: 960px) {
+      .event-hero-card {
+        grid-template-columns: 1fr;
+      }
+      .event-hero-poster {
+        border-right: none;
+        border-bottom: 1px solid rgba(250, 248, 244, 0.08);
+        padding: 20px;
+      }
+      .event-hero-poster img {
+        max-height: 440px;
+      }
+      .event-hero-body {
+        padding: 24px 20px;
+      }
+      .detail-highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       #nav {
         padding: 14px 20px;
@@ -429,10 +453,10 @@
         display: none;
       }
       .event-detail-main {
-        padding: 120px 20px 70px;
+        padding: 95px 16px 50px;
       }
       .event-hero-body {
-        padding: 26px 20px;
+        padding: 20px 16px;
       }
     }
   </style>
@@ -453,7 +477,6 @@
       <a href="projects.html" class="nav-link-item active" id="nav-projects-link">Projects</a>
     </div>
     <div class="nav-right">
-      <button class="nav-cta join-trigger" id="nav-join-btn"><span>Join Movement</span></button>
     </div>
   </nav>
 
@@ -550,10 +573,6 @@
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
               <span id="detailInterestBtnText">I'm Interested</span>
-            </button>
-
-            <button class="btn-p spark-trigger">
-              <span>RSVP / Inquire</span>
             </button>
 
             <button class="btn-o" onclick="shareDetailPage()">
