@@ -1,40 +1,26 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const url = require('url');
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const PORT = 3001;
-const ROOT = 'E:\\Ithish\\ahamsutra';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const mimeTypes = {
-  '.html': 'text/html',
-  '.js': 'application/javascript',
-  '.css': 'text/css',
-  '.json': 'application/json',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.svg': 'image/svg+xml',
-  '.ttf': 'font/ttf',
-  '.woff': 'font/woff'
-};
+const app = express();
+const PORT = 3000;
 
-const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url);
-  let filePath = path.join(ROOT, parsedUrl.pathname === '/' ? 'index.html' : parsedUrl.pathname);
-  const ext = path.extname(filePath);
-  const contentType = mimeTypes[ext] || 'text/plain';
-  
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      res.writeHead(404);
-      res.end('Not found');
-    } else {
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content);
-    }
-  });
+// Serve static assets from root directory
+app.use(express.static(__dirname));
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+// Fallback to index.html for SPA/root navigation
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Ahamsutra server running at http://0.0.0.0:${PORT}`);
 });

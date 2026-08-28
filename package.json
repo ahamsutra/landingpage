@@ -1,0 +1,14 @@
+{
+  "name": "ahamsutra-landingpage",
+  "version": "1.0.0",
+  "description": "Ahamsutra Social Lab — The Narrative of I & I",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Build completed')\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

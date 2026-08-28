@@ -1,0 +1,8 @@
+{
+  "name": "Ahamsutra Social Lab",
+  "description": "AhamSutra Media Lab is an interdisciplinary creative and digital media agency rooted in the philosophy of the Self.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
