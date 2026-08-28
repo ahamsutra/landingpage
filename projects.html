@@ -324,29 +324,30 @@
     /* Action Buttons in bottom */
     .event-actions {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       margin-top: 6px;
     }
 
     .btn-detailed {
-      flex: 1;
       font-family: var(--fh);
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--onyx);
       background: var(--gold);
       border: 1px solid var(--gold);
-      padding: 12px 18px;
+      padding: 10px 14px;
       border-radius: 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       cursor: pointer;
       transition: all .25s;
+      text-decoration: none;
     }
 
     .btn-detailed:hover {
@@ -356,19 +357,19 @@
 
     .btn-interested-toggle {
       font-family: var(--fh);
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: .16em;
+      letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--cream);
       background: rgba(250, 248, 244, 0.06);
       border: 1px solid rgba(250, 248, 244, 0.18);
-      padding: 12px 18px;
+      padding: 10px 14px;
       border-radius: 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       cursor: pointer;
       transition: all .25s;
     }
@@ -386,29 +387,36 @@
     }
 
     .btn-share {
-      width: 44px;
-      height: 44px;
-      background: rgba(250, 248, 244, 0.06);
-      border: 1px solid rgba(250, 248, 244, 0.18);
+      font-family: var(--fh);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: rgba(250, 248, 244, 0.08);
+      border: 1px solid rgba(250, 248, 244, 0.2);
+      padding: 10px 14px;
       border-radius: 8px;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: var(--cream);
+      gap: 6px;
       cursor: pointer;
       transition: all .25s;
       flex-shrink: 0;
     }
 
     .btn-share:hover {
-      background: rgba(201, 137, 46, 0.15);
+      background: rgba(201, 137, 46, 0.2);
       border-color: var(--gold);
-      color: var(--gold);
+      color: var(--gold-l);
     }
 
     .btn-share svg {
-      width: 18px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
     }
 
     /* ─── EVENT DETAILS MODAL ─── */
@@ -838,11 +846,12 @@
                 </svg>
                 <span id="btn-interest-text-1">Interested</span>
               </button>
-              <button class="btn-share" title="Share Event" onclick="shareEvent(1)">
+              <button class="btn-share" id="btn-share-1" title="Share Event" aria-label="Share Event" onclick="shareEvent(1)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
                   <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
                 </svg>
+                <span>Share</span>
               </button>
             </div>
           </div>
