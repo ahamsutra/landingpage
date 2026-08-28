@@ -25,6 +25,13 @@
   <link rel="stylesheet" href="css/style.css?v=14">
   <link rel="stylesheet" href="forms/spark/style.css">
   <link rel="stylesheet" href="forms/join/style.css">
+  <!-- ── CLEAN URL NORMALIZATION ── -->
+  <script>
+    if (window.location.pathname.endsWith('.html')) {
+      const cleanPath = window.location.pathname === '/index.html' ? '/' : window.location.pathname.replace(/\.html$/, '');
+      window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+    }
+  </script>
 
   <style>
     .event-detail-wrapper {
@@ -471,10 +478,10 @@
   <nav id="nav">
     <div class="nav-left"></div>
     <div class="nav-center">
-      <a href="index.html" class="nav-logo" id="nav-logo-link" title="Return to Home">
+      <a href="/" class="nav-logo" id="nav-logo-link" title="Return to Home">
         <img src="assets/svgs/navlogo.svg" alt="Ahamsutra Logo" class="nav-hero-logo">
       </a>
-      <a href="projects.html" class="nav-link-item active" id="nav-projects-link">Projects</a>
+      <a href="projects" class="nav-link-item active" id="nav-projects-link">Projects</a>
     </div>
     <div class="nav-right">
     </div>
@@ -482,7 +489,7 @@
 
   <div class="event-detail-wrapper">
     <main class="event-detail-main">
-      <a href="projects.html" class="back-nav-btn">
+      <a href="projects" class="back-nav-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M19 12H5M12 19l-7-7 7-7"/>
         </svg>
@@ -590,7 +597,7 @@
       <div class="ft-in">
         <div class="ft-top">
           <div class="ft-brand">
-            <a href="index.html">
+            <a href="/">
               <img src="assets/svgs/logo.svg" alt="AhamSutra Media Lab" class="ft-logo-svg">
             </a>
           </div>

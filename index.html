@@ -74,6 +74,13 @@
   <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="forms/spark/style.css">
   <link rel="stylesheet" href="forms/join/style.css">
+  <!-- ── CLEAN URL NORMALIZATION ── -->
+  <script>
+    if (window.location.pathname.endsWith('.html')) {
+      const cleanPath = window.location.pathname === '/index.html' ? '/' : window.location.pathname.replace(/\.html$/, '');
+      window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+    }
+  </script>
 </head>
 
 
@@ -208,7 +215,7 @@
       <a href="#s1" class="nav-logo" id="nav-logo-link">
         <img src="assets/svgs/navlogo.svg" alt="Ahamsutra Logo" class="nav-hero-logo">
       </a>
-      <a href="projects.html" class="nav-link-item" id="nav-projects-link">Projects</a>
+      <a href="projects" class="nav-link-item" id="nav-projects-link">Projects</a>
     </div>
     <div class="nav-right"></div>
   </nav>

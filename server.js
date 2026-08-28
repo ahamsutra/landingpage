@@ -10,8 +10,32 @@ const PORT = 3000;
 
 app.use(express.json());
 
+// Clean URL redirect middleware: strip .html extension for clean URLs and route event-details to event1
+app.use((req, res, next) => {
+  if (req.method === 'GET') {
+    const urlPath = req.path;
+    if (urlPath === '/event-details' || urlPath === '/event-details.html') {
+      const query = req.url.slice(urlPath.length);
+      return res.redirect(301, '/event1' + query);
+    }
+    // Don't redirect internal template fetch requests in /forms/
+    if (urlPath.endsWith('.html') && !urlPath.startsWith('/forms/')) {
+      if (urlPath === '/index.html') {
+        const query = req.url.slice(urlPath.length);
+        return res.redirect(301, '/' + query);
+      }
+      const cleanPath = urlPath.slice(0, -5);
+      const query = req.url.slice(urlPath.length);
+      return res.redirect(301, cleanPath + query);
+    }
+  }
+  next();
+});
+
 // Serve static assets from root directory
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, {
+  extensions: ['html']
+}));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
