@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── PRIMARY SEO ── -->
+  <title>International Overdose Awareness Day 2026 — Ahamsutra Projects</title>
+  <meta name="description"
+    content="Details, schedule, venue and participation info for International Overdose Awareness Day 2026 hosted at Centre of Excellence Auditorium, Institute of Mental Health, Erragadda, Hyderabad.">
+  <meta name="keywords"
+    content="International Overdose Awareness Day 2026, Mental Health Hyderabad, Erragadda Institute of Mental Health, Harm Reduction, Ahamsutra Social Lab">
+  <meta name="author" content="AhamSutra Media Lab">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#c9892e">
+
+  <!-- ── FAVICON ── -->
+  <link rel="icon" type="image/svg+xml" href="assets/svgs/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/svgs/favicon.svg">
+
+  <!-- ── STYLESHEETS ── -->
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="forms/spark/style.css">
+  <link rel="stylesheet" href="forms/join/style.css">
+
+  <style>
+    .event-detail-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--onyx);
+      color: var(--cream);
+      position: relative;
+    }
+
+    .event-detail-main {
+      flex: 1;
+      padding: 140px 40px 100px;
+      max-width: 980px;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .back-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--fh);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: color .2s, transform .2s;
+    }
+
+    .back-nav-btn:hover {
+      color: var(--gold-l);
+      transform: translateX(-4px);
+    }
+
+    .event-hero-card {
+      background: #171614;
+      border: 1px solid rgba(250, 248, 244, 0.12);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    .event-hero-poster {
+      width: 100%;
+      background: #0d0c0a;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      border-bottom: 1px solid rgba(250, 248, 244, 0.08);
+    }
+
+    .event-hero-poster img {
+      max-width: 100%;
+      max-height: 820px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+    }
+
+    .event-hero-body {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .detail-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid rgba(250, 248, 244, 0.08);
+      padding-bottom: 20px;
+    }
+
+    .detail-datetime {
+      font-family: var(--fh);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: #e09f3e;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .detail-datetime svg {
+      width: 17px;
+      height: 17px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .detail-interests-badge {
+      font-family: var(--fh);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--gold-l);
+      background: rgba(201, 137, 46, 0.12);
+      border: 1px solid rgba(201, 137, 46, 0.3);
+      padding: 8px 18px;
+      border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .interests-pulse {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.4); opacity: 1; }
+    }
+
+    .detail-title {
+      font-family: var(--fd);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--cream);
+      margin: 0;
+    }
+
+    .detail-address-box {
+      background: rgba(250, 248, 244, 0.03);
+      border: 1px solid rgba(250, 248, 244, 0.08);
+      border-radius: 10px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .detail-address-box svg {
+      width: 20px;
+      height: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .detail-address-content h4 {
+      font-family: var(--fh);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(250, 248, 244, 0.5);
+      margin: 0 0 4px 0;
+    }
+
+    .detail-address-content p {
+      font-family: var(--fb);
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--cream);
+      margin: 0;
+    }
+
+    .detail-section-title {
+      font-family: var(--fh);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .detail-section-title::before {
+      content: '';
+      width: 20px;
+      height: 1.5px;
+      background: var(--gold);
+    }
+
+    .detail-text {
+      font-family: var(--fb);
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(250, 248, 244, 0.85);
+      margin: 0;
+    }
+
+    .detail-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .highlight-item {
+      background: rgba(20, 19, 17, 0.7);
+      border: 1px solid rgba(250, 248, 244, 0.08);
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--fb);
+      font-size: 14.5px;
+      color: var(--cream);
+    }
+
+    .highlight-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .detail-cta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(250, 248, 244, 0.08);
+      margin-top: 10px;
+    }
+
+    .btn-interest-action {
+      font-family: var(--fh);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: rgba(250, 248, 244, 0.06);
+      border: 1px solid rgba(250, 248, 244, 0.2);
+      padding: 14px 26px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all .25s;
+    }
+
+    .btn-interest-action:hover,
+    .btn-interest-action.active {
+      background: rgba(201, 137, 46, 0.2);
+      border-color: var(--gold);
+      color: var(--gold-l);
+    }
+
+    /* ─── NAVIGATION BAR ─── */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 22px 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background .4s, padding .4s, border-color .4s;
+      border-bottom: 1px solid rgba(250, 248, 244, 0.08);
+      background: rgba(15, 14, 12, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    #nav.scrolled {
+      background: rgba(8, 7, 6, 0.94);
+      padding: 12px 72px;
+      border-bottom-color: rgba(201, 137, 46, 0.16);
+    }
+
+    .nav-left,
+    .nav-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-right {
+      justify-content: flex-end;
+    }
+
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-hero-logo {
+      height: 96px;
+      width: auto;
+      flex-shrink: 0;
+      transition: transform .3s;
+    }
+
+    .nav-link-item {
+      font-family: var(--fh);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: rgba(250, 248, 244, .85);
+      text-decoration: none;
+      position: relative;
+      padding: 8px 4px;
+      transition: color .25s ease;
+    }
+
+    .nav-link-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width .3s var(--ease-sm);
+    }
+
+    .nav-link-item:hover,
+    .nav-link-item.active {
+      color: var(--gold-l);
+    }
+
+    .nav-link-item:hover::after,
+    .nav-link-item.active::after {
+      width: 100%;
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--gold);
+      color: var(--onyx);
+      font-family: var(--fh);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      z-index: 100000;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all .3s ease;
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      #nav {
+        padding: 14px 20px;
+      }
+      #nav.scrolled {
+        padding: 10px 20px;
+      }
+      .nav-hero-logo {
+        height: 64px;
+      }
+      .nav-center {
+        gap: 18px;
+      }
+      .nav-right .nav-cta {
+        display: none;
+      }
+      .event-detail-main {
+        padding: 120px 20px 70px;
+      }
+      .event-hero-body {
+        padding: 26px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sp"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav id="nav">
+    <div class="nav-left"></div>
+    <div class="nav-center">
+      <a href="index.html" class="nav-logo" id="nav-logo-link" title="Return to Home">
+        <img src="assets/svgs/navlogo.svg" alt="Ahamsutra Logo" class="nav-hero-logo">
+      </a>
+      <a href="projects.html" class="nav-link-item active" id="nav-projects-link">Projects</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-cta join-trigger" id="nav-join-btn"><span>Join Movement</span></button>
+    </div>
+  </nav>
+
+  <div class="event-detail-wrapper">
+    <main class="event-detail-main">
+      <a href="projects.html" class="back-nav-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span>Back to Projects</span>
+      </a>
+
+      <article class="event-hero-card">
+        <div class="event-hero-poster">
+          <img 
+            src="assets/images/event_poster.jpg" 
+            alt="International Overdose Awareness Day 2026 - Institute of Mental Health Hyderabad"
+          />
+        </div>
+
+        <div class="event-hero-body">
+          <div class="detail-meta-row">
+            <div class="detail-datetime">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>31 August 2026 | 2:00–4:00 PM</span>
+            </div>
+
+            <div class="detail-interests-badge">
+              <span class="interests-pulse"></span>
+              <span id="detailInterestCountText">0 interested</span>
+            </div>
+          </div>
+
+          <h1 class="detail-title">
+            International Overdose Awareness Day 2026
+          </h1>
+
+          <div class="detail-address-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div class="detail-address-content">
+              <h4>Venue & Location</h4>
+              <p>Centre of Excellence Auditorium, Institute of Mental Health, Erragadda, Hyderabad</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="detail-section-title">About the Event</div>
+            <p class="detail-text">
+              International Overdose Awareness Day is the world’s largest annual campaign to end overdose, remember without stigma those who have died, and acknowledge the grief of family and friends left behind. Join us at the Centre of Excellence Auditorium, Institute of Mental Health, Erragadda for meaningful discussions, harm-reduction knowledge, healthcare expert insights, and community solidarity.
+            </p>
+          </div>
+
+          <div>
+            <div class="detail-section-title">Key Highlights</div>
+            <div class="detail-highlights">
+              <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Harm Reduction & Awareness</span>
+              </div>
+              <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Mental Health Specialists Panel</span>
+              </div>
+              <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Support & Safe Space Dialogue</span>
+              </div>
+              <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Community Solidarity & Action</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-cta-bar">
+            <button class="btn-interest-action" id="detailInterestBtn" onclick="toggleDetailInterest()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              <span id="detailInterestBtnText">I'm Interested</span>
+            </button>
+
+            <button class="btn-p spark-trigger">
+              <span>RSVP / Inquire</span>
+            </button>
+
+            <button class="btn-o" onclick="shareDetailPage()">
+              <span>Share Event</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- ══════════════════════════════════════════
+         FOOTER · CONTACT
+    ══════════════════════════════════════════ -->
+    <footer id="contact">
+      <div class="ft-in">
+        <div class="ft-top">
+          <div class="ft-brand">
+            <a href="index.html">
+              <img src="assets/svgs/logo.svg" alt="AhamSutra Media Lab" class="ft-logo-svg">
+            </a>
+          </div>
+          <div class="ft-col">
+            <h4>Contact</h4>
+            <div class="ft-ci">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:ahamsutra@outlook.com">ahamsutra@outlook.com</a>
+            </div>
+            <div class="ft-ci">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <a href="tel:+91 90100 90998">+91 90100 90998</a>
+            </div>
+          </div>
+        </div>
+        <div class="ft-bot">
+          <div class="ft-copy">© 2026 Ahamsutra Social Lab. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast-msg">Link copied to clipboard!</div>
+  <div id="spark-modal-container"></div>
+  <div id="join-modal-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="forms/spark/script.js"></script>
+  <script src="forms/join/script.js"></script>
+  <script>
+    const EVENT_ID = 1;
+
+    // Fetch real live interest count from backend API with fallback
+    async function loadLiveInterest() {
+      try {
+        const res = await fetch(`/api/events/${EVENT_ID}/interest`);
+        if (res.ok) {
+          const data = await res.json();
+          renderInterestUI(data.interests, data.userInterested);
+          return;
+        }
+      } catch (e) {
+        console.warn('API unavailable, reading local state');
+      }
+
+      const count = parseInt(localStorage.getItem(`ahamsutra_event_${EVENT_ID}_interest_count`) || '0', 10);
+      const isInterested = localStorage.getItem(`ahamsutra_event_${EVENT_ID}_user_interested`) === 'true';
+      renderInterestUI(count, isInterested);
+    }
+
+    function renderInterestUI(count, isInterested) {
+      document.getElementById('detailInterestCountText').textContent = `${count} interested`;
+      const btn = document.getElementById('detailInterestBtn');
+      const btnText = document.getElementById('detailInterestBtnText');
+      if (isInterested) {
+        btn.classList.add('active');
+        btnText.textContent = 'Interested (✓)';
+      } else {
+        btn.classList.remove('active');
+        btnText.textContent = "I'm Interested";
+      }
+    }
+
+    async function toggleDetailInterest() {
+      try {
+        const res = await fetch(`/api/events/${EVENT_ID}/interest/toggle`, { method: 'POST' });
+        if (res.ok) {
+          const data = await res.json();
+          renderInterestUI(data.interests, data.userInterested);
+          showToast(data.userInterested ? 'Interest registered!' : 'Interest removed');
+          localStorage.setItem(`ahamsutra_event_${EVENT_ID}_interest_count`, data.interests);
+          localStorage.setItem(`ahamsutra_event_${EVENT_ID}_user_interested`, data.userInterested);
+          return;
+        }
+      } catch (e) {}
+
+      // Local fallback toggle
+      let count = parseInt(localStorage.getItem(`ahamsutra_event_${EVENT_ID}_interest_count`) || '0', 10);
+      let isInterested = localStorage.getItem(`ahamsutra_event_${EVENT_ID}_user_interested`) === 'true';
+      isInterested = !isInterested;
+      count = isInterested ? count + 1 : Math.max(0, count - 1);
+      localStorage.setItem(`ahamsutra_event_${EVENT_ID}_interest_count`, count);
+      localStorage.setItem(`ahamsutra_event_${EVENT_ID}_user_interested`, isInterested);
+      renderInterestUI(count, isInterested);
+      showToast(isInterested ? 'Interest registered!' : 'Interest removed');
+    }
+
+    function shareDetailPage() {
+      const url = window.location.href;
+      if (navigator.share) {
+        navigator.share({
+          title: 'International Overdose Awareness Day 2026',
+          text: 'International Overdose Awareness Day 2026 at Centre of Excellence Auditorium, Institute of Mental Health, Erragadda, Hyderabad',
+          url: url
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast('Event link copied to clipboard!');
+        });
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    loadLiveInterest();
+
+    // Smooth scroll
+    if (typeof Lenis !== 'undefined') {
+      const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+
+    // Scroll progress bar & Nav scroll state
+    const sp = document.getElementById('sp');
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (total > 0 && sp) {
+        const pct = (window.scrollY / total) * 100;
+        sp.style.width = pct + '%';
+      }
+      if (nav) {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      }
+    }, { passive: true });
+
+    // Load contact modals
+    Promise.all([
+      fetch('forms/spark/index.html').then(r => { if (!r.ok) throw new Error('Failed to load SPARK form'); return r.text(); }),
+      fetch('forms/join/index.html').then(r => { if (!r.ok) throw new Error('Failed to load Join form'); return r.text(); })
+    ]).then(([sparkHtml, joinHtml]) => {
+      document.getElementById('spark-modal-container').innerHTML = sparkHtml;
+      document.getElementById('join-modal-container').innerHTML = joinHtml;
+      if (document.getElementById('contactModal')) initContactModal();
+      if (document.getElementById('joinModal')) initJoinModal();
+    }).catch(err => console.error('Error loading modals:', err));
+  </script>
+</body>
+
+</html>

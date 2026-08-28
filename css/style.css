@@ -259,6 +259,11 @@ img {
   justify-content: center;
   transition: background .4s, padding .4s, border-color .4s;
   border-bottom: 1px solid transparent;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body:has(#splash) #nav {
   opacity: 0;
   transform: translateY(-40px);
 }
