@@ -16,6 +16,11 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+// Projects page route
+app.get('/projects', (req, res) => {
+  res.sendFile(path.join(__dirname, 'projects.html'));
+});
+
 // Fallback to index.html for SPA/root navigation
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));

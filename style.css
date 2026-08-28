@@ -169,11 +169,51 @@ img {
   justify-content: flex-end;
 }
 
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none
+  text-decoration: none;
+}
+
+.nav-link-item {
+  font-family: var(--fh);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: rgba(250, 248, 244, .85);
+  text-decoration: none;
+  position: relative;
+  padding: 8px 4px;
+  transition: color .25s ease, opacity .25s ease;
+}
+
+.nav-link-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width .3s var(--ease-sm);
+}
+
+.nav-link-item:hover,
+.nav-link-item.active {
+  color: var(--gold-l);
+}
+
+.nav-link-item:hover::after,
+.nav-link-item.active::after {
+  width: 100%;
 }
 
 .nav-hero-logo {
