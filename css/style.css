@@ -333,6 +333,42 @@ body:has(#splash) #nav {
   width: 100%;
 }
 
+/* Corner Nav Button with refined border styling */
+.nav-corner-btn {
+  font-size: 11px;
+  letter-spacing: .2em;
+  padding: 8px 18px;
+  border: 1px solid rgba(201, 137, 46, 0.45);
+  border-radius: 40px;
+  background: rgba(201, 137, 46, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .25s ease;
+  box-shadow: none;
+}
+
+.nav-corner-btn::after {
+  display: none;
+}
+
+.nav-corner-btn:hover {
+  border-color: var(--gold);
+  background: rgba(201, 137, 46, 0.16);
+  color: var(--gold-l);
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.nav-corner-btn.active {
+  border-color: var(--gold);
+  background: rgba(201, 137, 46, 0.18);
+  color: var(--gold-l);
+  box-shadow: none;
+}
+
 .nav-hero-logo {
   height: 108px;
   width: auto;
